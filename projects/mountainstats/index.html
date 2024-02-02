@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin Auinger</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <section id="header" class="c70">
+        <div id="intro" class="inline">
+            <div>
+                <h1>MountainStats</h1>
+            </div>
+        </div>
+        <div>
+            Project Blog Coming Soon.
+        </div>
+    </section>
+    <section id="footer">
+        <span class="copyright">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Quinn Auinger</span>
+        <a class="link" href="https://www.linkedin.com/in/qauinger/" target="_blank">LinkedIn</a>
+        <a class="link" href="https://github.com/qauinger/" target="_blank">GitHub</a>
+        <a class="link" href="mailto:qaa4664@rit.edu" target="_blank">Email</a>
+    </section>
+    <div id="theme-wrapper">
+        <label class="theme-switch">
+            <input checked type="checkbox" onchange="toggleDarkMode()" id="theme-checkbox">
+            <span class="theme-slider"></span>
+            <script>
+                if(getCookie('theme') === 'light') {
+                    document.documentElement.classList.toggle('dark-mode');
+                    document.getElementById('theme-checkbox').checked = false;
+                }
+
+                function toggleDarkMode() {
+                    document.documentElement.classList.toggle('dark-mode');
+                    if(getCookie('theme') === 'light') {
+                        document.cookie = 'theme=dark;';
+                    } else {
+                        document.cookie = 'theme=light;';
+                    }
+                }
+
+                function getCookie(cname) {
+                    let name = cname + "=";
+                    let decodedCookie = decodeURIComponent(document.cookie);
+                    let ca = decodedCookie.split(';');
+                    for(let i = 0; i <ca.length; i++) {
+                        let c = ca[i];
+                        while (c.charAt(0) == ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+                }
+            </script>
+        </label>
+    </div>
+</body>

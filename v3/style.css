@@ -52,10 +52,6 @@ h3 {
     margin: 0 auto;
 }
 
-.ma {
-    margin: 0 auto;
-}
-
 #pfp {
     border-radius: 50%;
     max-height: 80%;
@@ -155,54 +151,6 @@ h3 {
 
 .skills div:hover {
     transform: rotate(-5deg);
-}
-
-.skills div a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.skills div a::after {
-    content: '↗';
-    font-weight: bolder;
-    color: var(--accent);
-    margin: 0 0px 0 10px;
-}
-
-.skills::before {
-    content: 'Skills:';
-    margin: auto 10px 0 0;
-    color: var(--text-color);
-}
-
-.links {
-    display: flex;
-    padding-bottom: 10px;
-}
-
-.links div {
-    margin-right: 10px;
-    border-radius: 0.5em;
-}
-
-.links div a {
-    color: var(--text-color);
-}
-
-.inlimg {
-    height: 1em;
-    width: 1em;
-    padding: 0 0.2em;
-    border: none;
-    border-style: none;
-}
-
-.finlimg {
-    padding-left: 1.4em;
-}
-
-.rit {
-    color: #F76902;
 }
 
 .wave:hover {

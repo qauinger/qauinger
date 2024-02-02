@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin Auinger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header" class="c70">
+        <div id="intro" class="inline">
+            <div>
+                <h1>My Projects</h1>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="c70">
+        <div class="project">
+            <a href="https://qauinger.com/mountainstats"><img src="../res/mountainstats-splash.png"></a>
+            <div>
+                <h3><a href="https://qauinger.com/projects/mountainstats">MountainStats</a></h3>
+                <p>
+                    MountainStats is an online web application that displays live open/closed statuses of ski resort trails and lifts in an easy to comprehend graphical format.
+                </p>
+                <div class="links">
+                    <a href="https://qauinger.com/projects/mountainstats">Learn More</a>
+                    <a href="https://qauinger.com/mountainstats">View Live</a>
+                    <a href="https://github.com/qauinger/mountainstats">GitHub</a>
+                </div>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>JavaScript</div>
+                    <div><a href="https://wiki.openstreetmap.org/wiki/Overpass_API" target="_blank">OverpassAPI</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <a href="https://qauinger.com/brainwave"><img src="../res/brainwave-splash.png"></a>
+            <div>
+                <h3><a href="https://qauinger.com/projects/brainwave">Brainwave</a></h3>
+                <p>
+                    Brainwave is an online learning platform that allows teachers to create extremely customizable, individualized activities for discrete students or classes as a whole.
+                </p>
+                <div class="links">
+                    <a href="https://qauinger.com/projects/brainwave">Learn More</a>
+                    <a href="https://qauinger.com/brainwave">View Live</a>
+                    <a href="https://github.com/qauinger/brainwave">GitHub</a>
+                </div>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>JavaScript</div>
+                    <div>Next.js</div>
+                    <div>Express.js</div>
+                    <div>SQL</div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <a href="https://qauinger.com/esoterpreter"><img src="../res/esoterpreter-splash.png"></a>
+            <div>
+                <h3><a href="https://qauinger.com/projects/esoterpreter">Esoterpreter</a></h3>
+                <p>
+                    An online interpreter for esoteric languages.
+                </p>
+                <div class="links">
+                    <a href="https://qauinger.com/projects/esoterpreter">Learn More</a>
+                    <a href="https://qauinger.com/esoterpreter">View Live</a>
+                    <a href="https://github.com/qauinger/esoterpreter">GitHub</a>
+                </div>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>JavaScript</div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <a href="https://github.com/qauinger/ir-data-compiler"><img src="../res/ir-data-compiler-splash.png"></a>
+            <div>
+                <h3><a href="https://qauinger.com/projects/ir-data-compiler">IR Data Compiler</a></h3>
+                <p>
+                    An online interpreter for esoteric languages.
+                </p>
+                <div class="links">
+                    <a href="https://qauinger.com/projects/ir-data-compiler">Learn More</a>
+                    <a href="https://github.com/qauinger/ir-data-compiler">GitHub</a>
+                </div>
+                <div class="skills">
+                    <div>Java</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <span class="copyright">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Quinn Auinger</span>
+        <a class="link" href="https://www.linkedin.com/in/qauinger/" target="_blank">LinkedIn</a>
+        <a class="link" href="https://github.com/qauinger/" target="_blank">GitHub</a>
+        <a class="link" href="mailto:qaa4664@rit.edu" target="_blank">Email</a>
+    </section>
+    <div id="theme-wrapper">
+        <label class="theme-switch">
+            <input checked type="checkbox" onchange="toggleDarkMode()" id="theme-checkbox">
+            <span class="theme-slider"></span>
+            <script>
+                if(getCookie('theme') === 'light') {
+                    document.documentElement.classList.toggle('dark-mode');
+                    document.getElementById('theme-checkbox').checked = false;
+                }
+
+                function toggleDarkMode() {
+                    document.documentElement.classList.toggle('dark-mode');
+                    if(getCookie('theme') === 'light') {
+                        document.cookie = 'theme=dark;';
+                    } else {
+                        document.cookie = 'theme=light;';
+                    }
+                }
+
+                function getCookie(cname) {
+                    let name = cname + "=";
+                    let decodedCookie = decodeURIComponent(document.cookie);
+                    let ca = decodedCookie.split(';');
+                    for(let i = 0; i <ca.length; i++) {
+                        let c = ca[i];
+                        while (c.charAt(0) == ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+                }
+            </script>
+        </label>
+    </div>
+</body>
+</html>

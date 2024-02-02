@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500&display=swap');
+
+:root {
+    --accent: #0055ff;
+    --text-color: #444452;
+    --background-color: white;
+    --selection-color: #adb53e80;
+}
+
+:root.dark-mode {
+    --accent: #00ff99;
+    --text-color: white;
+    --background-color: #171c28;
+}
+
+* {
+    overflow: visible;
+    transition: 0.5s;
+    font-family: 'Source Sans 3';
+    color: var(--text-color);
+}
+
+*::selection {
+    background-color: var(--selection-color);
+}
+
+body {
+    transition: 0.5s;
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+b {
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.c70 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#footer {
+    padding: 50px 80px;
+}
+
+#footer .link {
+    padding: 0px 15px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accent);
+    float: right;
+}
+
+#footer .link:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+#footer .copyright {
+    padding: 0px 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+#theme-wrapper {
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.theme-switch {
+    display: block;
+    --width-of-switch: 2em;
+    --height-of-switch: 2em;
+    --size-of-icon: 1.4em;
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+  
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.theme-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    transition: .4s;
+    border-radius: 30px;
+}
+  
+.theme-slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ffbf00, #ff8c00 70%);
+    transition: .4s;
+}
+  
+input:checked + .theme-slider {
+    background-color: var(--background-color);
+}
+  
+input:checked + .theme-slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: var(--background-color);
+    box-shadow: inset -3px -2px 5px -2px var(--accent), inset -10px -4px 0 0 var(--accent);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.project {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.project img {
+    width: 100%;
+    width: 500px;
+}
+
+.project a {
+    margin-right: 5%;
+}
+
+.project h3 {
+    margin: 10px 0px;
+    display: inline;
+}
+
+.links {
+    padding-bottom: 10px;
+}
+
+.links a {
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+.skills div {
+    display: inline-block;
+    margin-right: 2px;
+    padding: 0px 5px;
+    width: fit-content;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 0.5em;
+}
+
+.skills div:hover {
+    transform: rotate(-5deg);
+}
+
+.skills div a {
+    color: var(--accent);
+}
+
+.skills::before {
+    content: 'Skills:';
+    margin: auto 10px 0 0;
+    color: var(--text-color);
+}
