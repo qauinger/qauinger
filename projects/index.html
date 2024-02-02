@@ -109,9 +109,9 @@
                 function toggleDarkMode() {
                     document.documentElement.classList.toggle('dark-mode');
                     if(getCookie('theme') === 'light') {
-                        document.cookie = 'theme=dark;';
+                        document.cookie = 'theme=dark;path=/';
                     } else {
-                        document.cookie = 'theme=light;';
+                        document.cookie = 'theme=light;path=/';
                     }
                 }
 
