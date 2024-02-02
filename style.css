@@ -313,6 +313,26 @@ input:checked + .theme-slider:before {
     color: var(--accent);
 }
 
+#hire-banner {
+    background-color: var(--accent);
+    margin: 20px 0;
+}
+
+#hire-banner h2 {
+    font-size: 36px;
+    color: var(--background-color);
+    text-align: right;
+}
+
+#hire-banner-cut {
+    float: right;
+    background-color: var(--background-color);
+    width: 1.4em;
+    height: 1.4em;
+    rotate: 45deg;
+    translate:20px;
+}
+
 @media only screen and (max-width: 800px) {
     .c70 {
         width: 95%;
