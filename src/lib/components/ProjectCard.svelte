@@ -1,5 +1,5 @@
 <script lang='ts'>
-    let { id, title, live_link = null, description, images, skills } = $props();
+    let { id, title, live_link, download_link, teaser, images, skills } = $props();
 </script>
 
 <style>
@@ -96,6 +96,24 @@
         color: rgb(33, 41, 60);
     }
 
+    #download-link {
+        transition-duration: 0.25s;
+        color: rgb(7, 194, 188);
+        border: 2px solid rgb(7, 194, 188);
+    }
+
+    #download-link:hover {
+        transition-duration: 0.25s;
+        background-color: rgb(7, 194, 188);
+        color: rgb(33, 41, 60);
+    }
+
+    #teaser {
+        color: rgb(192, 192, 192);
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+
     .icon {
         font-family: 'fontello';
         padding-right: 5px;
@@ -115,11 +133,17 @@
         <a href='/projects/{id}'><h2>{title}</h2></a>
         <div id='buttons'>
             {#if live_link}
-            <a href={live_link} id='live-link' class='button'><span class="icon link-ext-alt-icon blink">&#xf14c;</span>Live</a>
+                <a href={live_link} id='live-link' class='button'><span class="icon link-ext-alt-icon blink">&#xf14c;</span>Live</a>
+            {/if}
+            {#if download_link}
+                <a href={download_link} id='download-link' class='button'><span class="icon link-ext-alt-icon blink">&#xe803;</span>Download</a>
             {/if}
             <a href='/projects/{id}' id='learn-more' class='button'><span class="icon link-ext-alt-icon blink">&#xE802;</span>Learn More</a>
         </div>
     </div>
+    {#if teaser}
+        <p id='teaser'>{teaser}</p>
+    {/if}
     {#if skills}
         <div id='skills'>
             {#each skills as {skill, description}}
@@ -132,13 +156,4 @@
             <img {src} {alt}>
         {/each}
     </div>
-    <!-- <div id='description'>
-        {#if Array.isArray(description)}
-            {#each description as paragraph}
-                <p>{paragraph}</p>
-            {/each}
-        {:else}
-            <p>{description}</p>
-        {/if}
-    </div> -->
 </div>

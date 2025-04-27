@@ -31,8 +31,8 @@
 <section id='title' class='border-below'>
 	<h1>Highlighted Projects</h1>
 </section>
-{#each data.summaries as {id, title, live_link, description, images, skills}}
+{#each data.summaries as {id, title, live_link, download_link, images, skills, teaser}}
 	<section class='project'>
-	    <ProjectCard {id} {title} {live_link} {description} {images} {skills} />
+	    <ProjectCard {id} {title} {live_link} {download_link} {images} {skills} {teaser} />
 	</section>
 {/each}
