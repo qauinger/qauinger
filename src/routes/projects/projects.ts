@@ -41,6 +41,23 @@ export const projects = [
 		]
 	},
 	{
+		id: 'encoded-polyline-api',
+		title: 'Encoded Polyline API',
+		live_link: 'https://qauinger.dev/encoded-polyline-api',
+		teaser: 'An API for converting Google\'s Encoded Polyline Algorithm Format.',
+		description: 'You can use this API to easily convert between common geo-data formats such as GeoJSON, WKT, and simple coordinate arrays and Google\'s Encoded Polyline Algorithm Format. Encoded Polylines are ',
+		images: [
+			{
+				src: '/image/encoded-polyline-api/encode.png',
+				alt: 'API documentation for encoding'
+			},
+			{
+				src: '/image/encoded-polyline-api/decode.png',
+				alt: 'API documentation for decoding'
+			}
+		]
+	},
+	{
 		id: 'dhss101-final',
 		title: 'DHSS101 Final',
 		live_link: 'https://qauinger.dev/dhss101-final',
